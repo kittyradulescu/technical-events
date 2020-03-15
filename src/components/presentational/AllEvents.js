@@ -8,4 +8,4 @@ const AllEvents = (props) => {
 
 };
 
-export default AllEvents
+export default AllEvents;
