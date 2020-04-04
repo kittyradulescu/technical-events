@@ -6,6 +6,6 @@ Access-Control-Allow-Origin: *
     {"id": 1, "name": "React Beginner Workshop", "description": "Curious about React? Join us for React Essentials."},
     {"id": 2, "name": "Javascript Workshop", "description": "Learning Javascript is always challenging. Challenge yourself at this workshop."},
     {"id": 3, "name": "Java 8 Workshop", "description": "Find out more abot Java 8 features."},
-    {"id": 3, "name": "Learn Scala", "description": "Introduction in Scala."},
-    {"id": 3, "name": "AI Advanced Algorithms", "description": "Let's learn AI together at this fabulous workshop."}
+    {"id": 4, "name": "Learn Scala", "description": "Introduction in Scala."},
+    {"id": 5, "name": "AI Advanced Algorithms", "description": "Let's learn AI together at this fabulous workshop."}
 ]
