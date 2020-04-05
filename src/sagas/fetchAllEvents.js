@@ -8,7 +8,6 @@ import {FETCH_EVENTS, finishFetchingEvents, setError} from "../actions/eventActi
 export function* fetchAllEventsEffect(action): * {
     try {
         const response = yield call(fetchEvents);
-        console.log("hello", response);
         yield put(finishFetchingEvents(response.data));
     } catch (e) {
         console.error("Could not load events", e);
