@@ -1,24 +1,23 @@
-.main-events {
+.header {
+  top: 0px;
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  background-color: burlywood;
+  z-index: 2;
 
-  .header {
-    top: 0px;
-    width: 100%;
-    height: 100px;
-    text-align: center;
-    font-size: 30px;
-    font-weight: bold;
-    background-color: burlywood;
-    position: fixed;
-    z-index: 2;
-
-    .title {
-      margin-top: 35px;
-    }
+  .title {
+    padding-top: 35px;
   }
+}
 
+.main-events {
   .events-container {
-    margin: 150px auto;
+    margin: 50px auto;
     max-width: 800px;
+
     .event-details {
       position: relative;
       border: 1px solid;
@@ -60,4 +59,114 @@
       }
     }
   }
+}
+
+.event-flex-container {
+  top: 150px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+
+  .title {
+    width: 100%;
+    background-color: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 4rem;
+  }
+
+  .information-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .image-container {
+      height: 20rem;
+      width: 400px;
+      background-image: url("../../images/java.jpg");
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    .location-container {
+      height: 20rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      max-width: 400px;
+
+      .location {
+        background-color: lightblue;
+        border: 1px solid;
+        border-radius: 5px;
+        padding: 20px;
+      }
+    }
+  }
+
+  .summary-container {
+    width: 100%;
+
+    .summary {
+      max-width: 800px;
+      padding: 20px;
+      margin: auto;
+      display: flex;
+      justify-content: space-around;
+      min-height: 20rem;
+      flex-direction: column;
+      background-color: lightblue;
+      border: 1px solid;
+      border-radius: 5px;
+    }
+  }
+
+  .attendees-container {
+    width: 100%;
+
+    .participants {
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
+
+      .attendees {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        .participant {
+          margin: 5px;
+          border: 1px solid;
+          border-radius: 5px;
+          padding: 5px;
+        }
+      }
+    }
+  }
+
+  .comments-container {
+    width: 100%;
+
+    .comments {
+      margin: auto;
+      max-width: 800px;
+      display: flex;
+      flex-direction: column;
+
+      .comment {
+        max-width: 300px;
+        background-color: lightgrey;
+        padding: 10px;
+        margin: 5px;
+        font: italic 12px normal;
+        border: 1px solid;
+        border-radius: 5px;
+        box-shadow: 5px 5px darkgrey;
+      }
+    }
+  }
+
 }

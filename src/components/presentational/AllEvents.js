@@ -8,6 +8,10 @@ const AllEvents = (props) => {
     }, [props.fetchAllEvents]);
 
 
+    const viewEventDetails = () => {
+        props.history.push('/event-info');
+    };
+
     const renderHeader = () => {
         return <div className="header">
             <div className="title">Technical Events</div>
@@ -26,7 +30,7 @@ const AllEvents = (props) => {
                     {event.description}
                 </div>
 
-                <button className="event-info">
+                <button className="event-info" onClick={() => viewEventDetails()}>
                     View Details
                 </button>
 
