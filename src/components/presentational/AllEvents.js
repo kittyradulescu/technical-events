@@ -1,5 +1,6 @@
 import React, {useEffect} from "react";
 import "./AllEvents.scss";
+import Header from "./Header";
 
 const AllEvents = (props) => {
 
@@ -10,22 +11,6 @@ const AllEvents = (props) => {
 
     const viewEventDetails = () => {
         props.history.push('/event-info');
-    };
-
-    const renderHeader = () => {
-        return <div className="header">
-            <div className="left">
-                <div className="home-container">
-                    <button className="home-button">Home</button>
-                </div>
-                <div className="button-container">
-                    <button className="button">Create Event</button>
-                </div>
-            </div>
-            <div className="title-container">
-                <div className="title">Technical Events</div>
-            </div>
-        </div>
     };
 
     const renderEvents = () => {
@@ -50,9 +35,8 @@ const AllEvents = (props) => {
             </div>);
     };
 
-
     return <div className="main-events">
-        <div>{renderHeader()}</div>
+        <div><Header {...props}/></div>
         <div className="events-container">{renderEvents()}</div>
     </div>;
 

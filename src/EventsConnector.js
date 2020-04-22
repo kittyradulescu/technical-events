@@ -11,6 +11,7 @@ import {BrowserRouter, Route} from "react-router-dom";
 import {Switch} from "react-router-dom";
 import EventInformationContainer from "./components/container/EventInformationContainer";
 import fetchEvent from "./sagas/fetchEvent";
+import CreateEvent from "./components/presentational/CreateEvent";
 
 export const sagaMiddleware = createSagaMiddleware();
 const appliedMiddleware = applyMiddleware(sagaMiddleware);
@@ -26,8 +27,9 @@ export const EventsConnector = (props) => (
         <BrowserRouter>
             <Switch>
                 <Route>
+                    <Route path="/event-info" component={EventInformationContainer} props={props}/>
+                    <Route path="/create-event" component={CreateEvent} props={props}/>
                     <Route exact path="/" component={AllEvents} props={props}/>
-                    <Route exact path="/event-info" component={EventInformationContainer} props={props}/>
                 </Route>
             </Switch>
         </BrowserRouter>

@@ -1,6 +1,7 @@
 import React, {useEffect} from "react";
 import "./AllEvents.scss";
 import Avatar from "react-avatar";
+import Header from "./Header";
 
 const EventInformation = (props) => {
 
@@ -8,22 +9,6 @@ const EventInformation = (props) => {
         props.fetchEvent()
     }, [props.fetchEvent]);
 
-
-    const renderHeader = () => {
-        return <div className="header">
-            <div className="left">
-                <div className="home-container">
-                    <button className="home-button">Home</button>
-                </div>
-                <div className="button-container">
-                    <button className="button">Create Event</button>
-                </div>
-            </div>
-            <div className="title-container">
-                <div className="title">Technical Events</div>
-            </div>
-        </div>
-    };
 
     const renderParticipants = () => {
         const event = props.event;
@@ -104,7 +89,7 @@ const EventInformation = (props) => {
 
     return (
         <div>
-            {renderHeader()}
+            <Header {...props}/>
             {renderBody()}
         </div>
     );
