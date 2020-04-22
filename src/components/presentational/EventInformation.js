@@ -11,7 +11,17 @@ const EventInformation = (props) => {
 
     const renderHeader = () => {
         return <div className="header">
-            <div className="title">Technical Events</div>
+            <div className="left">
+                <div className="home-container">
+                    <button className="home-button">Home</button>
+                </div>
+                <div className="button-container">
+                    <button className="button">Create Event</button>
+                </div>
+            </div>
+            <div className="title-container">
+                <div className="title">Technical Events</div>
+            </div>
         </div>
     };
 
