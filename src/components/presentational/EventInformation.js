@@ -13,8 +13,10 @@ const EventInformation = (props) => {
     const renderParticipants = () => {
         const event = props.event;
         return event.participants.map(item =>
-            <div className="participant"><Avatar name={item.firstName + " " + item.lastName}
-                                                 size="20"/> {item.firstName + " " + item.lastName} </div>);
+            <div className="participant">
+                <Avatar name={item.firstName + " " + item.lastName} size="20"/>
+                {item.firstName + " " + item.lastName}
+            </div>);
     };
 
     const renderComments = () => {
@@ -22,7 +24,7 @@ const EventInformation = (props) => {
         return event.comments.map(item =>
             <div className="comment">{item.description}</div>
         );
-    }
+    };
 
     const renderBody = () => {
         const event = props.event;
@@ -71,11 +73,9 @@ const EventInformation = (props) => {
                 </div>
             </div>
             <div className="attendees-container">
-                <div className="participants">
-                    <div>Participants ({event.participants.length})</div>
-                    <div className="attendees">
-                        {renderParticipants()}
-                    </div>
+                <div>Participants ({event.participants.length})</div>
+                <div className="attendees">
+                    {renderParticipants()}
                 </div>
             </div>
             <div className="comments-container">

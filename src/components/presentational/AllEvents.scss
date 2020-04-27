@@ -172,24 +172,21 @@
   }
 
   .attendees-container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
 
-    .participants {
-      max-width: 800px;
-      margin: auto;
-      padding: 20px;
+    .attendees {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      flex-wrap: wrap;
 
-      .attendees {
-        display: flex;
-        align-items: center;
-        flex-direction: row;
-        flex-wrap: wrap;
-
-        .participant {
-          margin: 5px;
-          border: 1px solid;
-          border-radius: 5px;
-          padding: 5px;
-        }
+      .participant {
+        margin: 5px;
+        border: 1px solid;
+        border-radius: 5px;
+        padding: 5px;
       }
     }
   }
@@ -225,6 +222,7 @@
 
   .image-container {
     justify-self: center;
+
     .event-image {
       height: 200px;
       align-content: center;
@@ -286,6 +284,6 @@
 
 @media (min-width: 50em) {
   .event-create-container {
-    grid-template-columns:  1fr 2fr 1fr;
+    grid-template-columns: 1fr 2fr 1fr;
   }
 }
