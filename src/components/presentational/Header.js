@@ -11,6 +11,10 @@ const Header = (props) => {
         props.history.push('/');
     };
 
+    const viewAllPosts = () => {
+      props.history.push('/posts');
+    };
+
     return <div className="header">
         <div className="left">
             <div className="home-container">
@@ -18,6 +22,9 @@ const Header = (props) => {
             </div>
             <div className="button-container">
                 <button className="button" onClick={() => createEvent()}>Create Event</button>
+            </div>
+            <div className="button-container">
+                <button className="button" onClick={() => viewAllPosts()}>Posts</button>
             </div>
         </div>
         <div className="title-container">
