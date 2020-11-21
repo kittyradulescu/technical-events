@@ -4,6 +4,7 @@ import Header from "./Header";
 import ArticlePost from "./ArticlePost";
 import SimplePost from "./SimplePost";
 import {getAllPosts} from "../../util";
+import "./PostPage.scss";
 
 const EXPANDED_ROW_SIZE = 250;
 const ROW_SIZE = 200;
@@ -22,9 +23,9 @@ const rowHeight = (item: Object) => {
 
 const PostPage = (props) => {
 
-    return <div style={{height: "100%"}}>
+    return <div className="posts-container">
         <Header {...props}/>
-        <div style={{height: "100%", width: "75%", margin: "20px auto"}}>
+        <div className="posts-grid">
             <AutoSizer>
                 {({height, width}) => (
                     <List
