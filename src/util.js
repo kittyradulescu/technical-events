@@ -1,49 +1,24 @@
 import faker from "faker";
 
-const allPosts = [
-    {type: "article", title: "Using React's key features", description: faker.lorem.paragraph(), image: faker.image.image(), notes: faker.lorem.paragraph()},
-    {type: "article", title: "Simple code with NodeJs", description: faker.lorem.paragraph(), image: faker.image.image(), notes: faker.lorem.paragraph()},
-    {type: "question", title: "What are simple tricks for using React hooks?", description: faker.lorem.sentence(), image: faker.image.image()},
-    {type: "question", title: "Reflux or Redux?", description: faker.lorem.sentence(), image: faker.image.image()},
-    {type: "article", title: faker.lorem.sentence(), description: faker.lorem.sentence(), image: faker.image.image(), notes: faker.lorem.paragraph()},
-    {type: "question", title: faker.lorem.sentence(), description: faker.lorem.sentence(), image: faker.image.image()},
-    {type: "question", title: faker.lorem.sentence(), description: faker.lorem.sentence(), image: faker.image.image()},
-    {type: "question", title: faker.lorem.sentence(), description: faker.lorem.sentence(), image: faker.image.image()},
-    {type: "question", title: faker.lorem.sentence(), description: faker.lorem.sentence(), image: faker.image.image()},
-    {type: "article", title: faker.lorem.sentence(), description: faker.lorem.sentence(), image: faker.image.image(), notes: faker.lorem.paragraph()},
-    {type: "article", title: faker.lorem.sentence(), description: faker.lorem.sentence(), image: faker.image.image(), notes: faker.lorem.paragraph()},
-    {type: "article", title: faker.lorem.sentence(), description: faker.lorem.sentence(), image: faker.image.image(), notes: faker.lorem.paragraph()},
-    {type: "article", title: faker.lorem.sentence(), description: faker.lorem.sentence(), image: faker.image.image(), notes: faker.lorem.paragraph()},
-    {type: "article", title: faker.lorem.sentence(), description: faker.lorem.sentence(), image: faker.image.image(), notes: faker.lorem.paragraph()},
-    {type: "article", title: faker.lorem.sentence(), description: faker.lorem.sentence(), image: faker.image.image(), notes: faker.lorem.paragraph()},
-    {type: "article", title: faker.lorem.sentence(), description: faker.lorem.sentence(), image: faker.image.image()},
-    {type: "article", title: faker.lorem.sentence(), description: faker.lorem.sentence(), image: faker.image.image()},
-    {type: "article", title: faker.lorem.sentence(), description: faker.lorem.sentence(), image: faker.image.image()},
-    {type: "article", title: faker.lorem.sentence(), description: faker.lorem.sentence(), image: faker.image.image()},
-    {type: "article", title: faker.lorem.sentence(), description: faker.lorem.sentence(), image: faker.image.image()},
-    {type: "article", title: faker.lorem.sentence(), description: faker.lorem.sentence(), image: faker.image.image()},
-    {type: "article", title: faker.lorem.sentence(), description: faker.lorem.sentence(), image: faker.image.image()},
-    {type: "article", title: faker.lorem.sentence(), description: faker.lorem.sentence(), image: faker.image.image()},
-    {type: "question", title: faker.lorem.sentence(), description: faker.lorem.sentence(), image: faker.image.image()},
-    {type: "question", title: faker.lorem.sentence(), description: faker.lorem.sentence(), image: faker.image.image()},
-    {type: "question", title: faker.lorem.sentence(), description: faker.lorem.sentence(), image: faker.image.image()},
-    {type: "question", title: faker.lorem.sentence(), description: faker.lorem.sentence(), image: faker.image.image()},
-    {type: "question", title: faker.lorem.sentence(), description: faker.lorem.sentence(), image: faker.image.image()},
-    {type: "question", title: faker.lorem.sentence(), description: faker.lorem.sentence(), image: faker.image.image()},
-    {type: "question", title: faker.lorem.sentence(), description: faker.lorem.sentence(), image: faker.image.image()},
-    {type: "question", title: faker.lorem.sentence(), description: faker.lorem.sentence(), image: faker.image.image()},
-    {type: "question", title: faker.lorem.sentence(), description: faker.lorem.sentence(), image: faker.image.image()},
-    {type: "question", title: faker.lorem.sentence(), description: faker.lorem.sentence(), image: faker.image.image()},
-    {type: "question", title: faker.lorem.sentence(), description: faker.lorem.sentence(), image: faker.image.image()},
-    {type: "question", title: faker.lorem.sentence(), description: faker.lorem.sentence(), image: faker.image.image()},
-    {type: "question", title: faker.lorem.sentence(), description: faker.lorem.sentence(), image: faker.image.image()},
-    {type: "question", title: faker.lorem.sentence(), description: faker.lorem.sentence(), image: faker.image.image()},
-    {type: "question", title: faker.lorem.sentence(), description: faker.lorem.sentence(), image: faker.image.image()},
-    {type: "question", title: faker.lorem.sentence(), description: faker.lorem.sentence(), image: faker.image.image()},
-    {type: "question", title: faker.lorem.sentence(), description: faker.lorem.sentence(), image: faker.image.image()},
-    {type: "question", title: faker.lorem.sentence(), description: faker.lorem.sentence(), image: faker.image.image()},
-];
+const generateType = () => {
+    return Math.floor(Math.random() * 10) % 2 === 0 ? "article" : "question";
+}
+
+const generateEntry = () => {
+    return {
+        type: generateType(),
+        title: faker.lorem.sentence(),
+        description: faker.lorem.paragraph(),
+        image: faker.image.image(),
+        notes: faker.lorem.paragraph(),
+    }
+}
 
 export function getAllPosts() {
+    let allPosts = [];
+    while (allPosts.length < 100) {
+        const entry = generateEntry();
+        allPosts.push(entry);
+    }
     return allPosts;
 }

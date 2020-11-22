@@ -22,7 +22,6 @@ const rowHeight = (item: Object) => {
 };
 
 const PostPage = (props) => {
-
     return <div className="posts-container">
         <Header {...props}/>
         <div className="posts-grid">
