@@ -8,7 +8,7 @@ import "./PostPage.scss";
 
 const EXPANDED_ROW_SIZE = 250;
 const ROW_SIZE = 200;
-const allPosts = getAllPosts();
+const allPosts = getAllPosts(100);
 
 const renderPost = (item: Object) => {
     const {index} = item;
@@ -28,8 +28,6 @@ const PostPage = (props) => {
             <AutoSizer>
                 {({height, width}) => (
                     <List
-                        ref={"List"}
-                        className="List"
                         height={height}
                         width={width}
                         itemCount={allPosts.length}

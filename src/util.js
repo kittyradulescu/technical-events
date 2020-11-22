@@ -14,9 +14,9 @@ const generateEntry = () => {
     }
 }
 
-export function getAllPosts() {
+export function getAllPosts(nrOfRecords: number) {
     let allPosts = [];
-    while (allPosts.length < 100) {
+    while (allPosts.length < nrOfRecords) {
         const entry = generateEntry();
         allPosts.push(entry);
     }
